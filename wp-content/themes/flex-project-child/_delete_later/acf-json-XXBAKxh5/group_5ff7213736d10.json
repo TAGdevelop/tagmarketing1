@@ -1,0 +1,40 @@
+{
+    "key": "group_5ff7213736d10",
+    "title": "tagGLOBAL - tagJOIN Link",
+    "fields": [
+        {
+            "key": "field_5ff7214c11161",
+            "label": "tagJOIN Link",
+            "name": "tagjoin_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "tagjoin-link"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1610736151
+}

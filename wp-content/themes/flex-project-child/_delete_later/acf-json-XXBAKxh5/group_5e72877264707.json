@@ -1,0 +1,182 @@
+{
+    "key": "group_5e72877264707",
+    "title": "tagGLOBAL - Google Tag Manager",
+    "fields": [
+        {
+            "key": "field_5e7287c0f7906",
+            "label": "Google Tag Selector",
+            "name": "google_tag_selector",
+            "type": "button_group",
+            "instructions": "Use the Google tag manager ID or select the overrride to add the entire Google tag code",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [
+                "Use Single GTM Container",
+                "Use Multi GTM Container",
+                "Use Override Code"
+            ],
+            "allow_null": 0,
+            "default_value": 0,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5e728be6390b6",
+            "label": "Google Tag Manager",
+            "name": "google_tag_manager",
+            "type": "text",
+            "instructions": "Insert the GTM ID here. FORMAT = GTM-XXXXXXX",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e7287c0f7906",
+                        "operator": "==",
+                        "value": "0"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e728cf8e67d0",
+            "label": "Google Tag Manager ID #1",
+            "name": "gtm_1",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e7287c0f7906",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e728d19e67d1",
+            "label": "Google Tag Manager ID #2",
+            "name": "gtm_2",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e7287c0f7906",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e728d74e9a7b",
+            "label": "Header - Google Tag Manager Override",
+            "name": "tag_manager_head",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e7287c0f7906",
+                        "operator": "==",
+                        "value": "2"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e728d9fe9a7c",
+            "label": "Body - Google Tag Manager Override",
+            "name": "tag_manager_body",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e7287c0f7906",
+                        "operator": "==",
+                        "value": "2"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-google-tag-manager"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1609969613
+}

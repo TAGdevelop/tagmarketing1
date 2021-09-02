@@ -1,0 +1,26 @@
+/* GLOBAL */
+body {margin:0 auto;}
+a,a:hover {text-decoration:none;}
+ 
+/* swiper slider css */
+.alert_swiper {margin:0 auto;}
+.tag_alert {min-height: 80px;}
+.tag_alert .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.tag_alert a, .tag_alert a:hover {transition:all 0.3s ease-in-out;}
+.tag_alert .swiper-slide {text-align: center;padding:8px 55px;}
+.tag_alert .pagination_spacer{height:28px;}
+
+.mobile-menu-social a.elementor-item {display:none;}
+
+
+/* keep at end of CSS */
+ .display_block {display:block;}
+ .display_none {display:none;}
+ /*hide nav and pagination if swiper has < 2 images */
+ .swiper-pagination-lock, .tag_swiper .elementor-swiper-button-next.swiper-button-disabled, .tag_swiper .elementor-swiper-button-prev.swiper-button-disabled {transition:all .3s ease-in-out;opacity:0;}
+ /* goback JS onclick link for privacy page */
+ #goback:hover {letter-spacing:0.2em;cursor:pointer;}
+ 

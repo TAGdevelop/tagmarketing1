@@ -1,0 +1,24 @@
+/* top dashboard menu stuff */
+
+/** Hide Admin top toolbar items */
+#wp-admin-bar-tbex-sitegroup-manage-content,
+#wp-admin-bar-website-settings-landingpages,
+#wp-admin-bar-tbex-sitegroup-forms,
+#wp-admin-bar-tbex-sitegroup-elements,
+#wp-admin-bar-tbex-sitegroup-stuff,
+#wpadminbar .quicklinks .menupop ul.ab-sub-secondary, #wpadminbar .quicklinks .menupop ul.ab-sub-secondary .ab-submenu,#wp-admin-bar-new-content,
+#wp-admin-bar-tbex-toolbar-extras, #wp-admin-bar-wp-logo
+{display:block;}
+
+/** autoptimize link unclickable but still can clear cache */
+#wp-admin-bar-autoptimize a {pointer-events: auto;
+  cursor: pointer;}
+
+
+/* end top dashboard menu stuff */
+/* branda hide admin menu user roles that are auto created by event calendar and and store locator and are  not used */ 
+#branda-custom-admin-menu-tab-ai1ec_event_assistant,#branda-custom-admin-menu-tab-wpsl_store_locator_manager {display:none;}
+
+
+
+

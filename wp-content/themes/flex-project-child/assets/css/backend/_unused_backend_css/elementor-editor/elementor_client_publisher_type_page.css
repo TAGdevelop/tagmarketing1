@@ -1,0 +1,22 @@
+/*
+changes in elementor for client_admin role
+*/
+
+
+
+
+/* hide things like template changes and h1 styles */
+/* needs to load on live pages only */
+.elementor-control-size,
+.elementor-control-header_size,
+.elementor-control-template,
+.elementor-control-align,
+.elementor-control-hide_title,
+ .elementor-panel #elementor-panel-content-wrapper #elementor-panel__editor__help,
+div.elementor-panel .elementor-panel-navigation .elementor-tab-control-advanced,
+.elementor-control-post_status
+{display:none;}
+
+
+
+

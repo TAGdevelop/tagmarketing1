@@ -1,0 +1,16 @@
+/*
+changes in elementor for  client editor role
+*/
+
+
+/** HIDE STUFF from user **/
+/* library modal box */
+.elementor-template-library-template-local .elementor-template-library-template-more>.elementor-template-library-template-delete{display:none;}
+.elementor-template-library-template-local .elementor-template-library-template-controls>.elementor-template-library-template-more-toggle {display:none;}
+.eicon-elementor:before {content: "\f217";font-family:dashicons;}
+.dialog-content .elementor-template-library-local-column-3, .elementor-template-library-local-column-4 {visibility:hidden}
+
+
+
+
+

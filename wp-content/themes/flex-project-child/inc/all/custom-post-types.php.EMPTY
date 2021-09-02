@@ -1,0 +1,14 @@
+<?php 
+/*
+
+@package flexproject
+
+   ===============
+   ADMIN CUSTOM POST TYPES
+   ===============
+   
+*/
+
+if ( ! defined( 'ABSPATH' ) ) {
+  exit; // Exit if accessed directly.
+}

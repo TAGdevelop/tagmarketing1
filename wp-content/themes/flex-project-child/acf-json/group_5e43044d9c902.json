@@ -1,0 +1,3444 @@
+{
+    "key": "group_5e43044d9c902",
+    "title": "tagGLOBAL - Hours -",
+    "fields": [
+        {
+            "key": "field_5e43044d9e953",
+            "label": "Hours of Operation",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "MAIN HOURS are used for schema - <br>Alternates can be used with the \"shortcode\" Elementor widget. By default they display in Bootstrap 4 zebra striped style at 100% width of their container - but do have a unique css class if custom style is desired.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5e43044d9e988",
+            "label": "Display Hours of Operation",
+            "name": "display_hours_of_operation",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "choices": [
+                "Main Hours",
+                "Alternate One",
+                "Alternate Two"
+            ],
+            "allow_null": 0,
+            "default_value": 0,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5e43044d9e9bd",
+            "label": "Main Hours",
+            "name": "main_hours",
+            "type": "group",
+            "instructions": "<b>SHORTCODE<\/b> = [tag_hours]",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e43044d9e988",
+                        "operator": "==",
+                        "value": "0"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e43044dde0fc",
+                    "label": "Mo",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Mo<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044ddf469",
+                    "label": "Monday Choice",
+                    "name": "mo_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": [
+                        0
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e43044de07a6",
+                    "label": "Monday Hours",
+                    "name": "mo_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044ddf469",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "acfe_repeater_stylised_button": 0,
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e43044de1b02",
+                            "label": "Open",
+                            "name": "mo_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_5e43044de1b3b",
+                            "label": "Close",
+                            "name": "mo_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5e43044de4a4f",
+                    "label": "Monday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044ddf469",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044de5d4f",
+                    "label": "Monday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044ddf469",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044de7053",
+                    "label": "Tu",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Tu<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044de83ae",
+                    "label": "Tuesday Choice",
+                    "name": "tu_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": [
+                        0
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e43044de9716",
+                    "label": "Tuesday Hours",
+                    "name": "tu_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044de83ae",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "acfe_repeater_stylised_button": 0,
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e43044deaa1a",
+                            "label": "Open",
+                            "name": "tu_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_5e43044deaa51",
+                            "label": "Close",
+                            "name": "tu_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5e43044deda95",
+                    "label": "Tuesday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044de83ae",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044deeeee",
+                    "label": "Tuesday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044de83ae",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044df04b6",
+                    "label": "We",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>We<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044df1904",
+                    "label": "Wednesday Choice",
+                    "name": "we_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": [
+                        0
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e43044df2b69",
+                    "label": "Wednesday Hours",
+                    "name": "we_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044df1904",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "acfe_repeater_stylised_button": 0,
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e43044df3e1a",
+                            "label": "Open",
+                            "name": "we_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_5e43044df3e50",
+                            "label": "Close",
+                            "name": "we_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5e43044e028d4",
+                    "label": "Wednesday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044df1904",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044e03a47",
+                    "label": "Wednesday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044df1904",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044e04b52",
+                    "label": "Th",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Th<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044e05c1f",
+                    "label": "Thursday Choice",
+                    "name": "th_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": [
+                        0
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e43044e06d81",
+                    "label": "Thursday Hours",
+                    "name": "th_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044e05c1f",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "acfe_repeater_stylised_button": 0,
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e43044e07e8f",
+                            "label": "Open",
+                            "name": "th_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_5e43044e07ec6",
+                            "label": "Close",
+                            "name": "th_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5e43044e0ba91",
+                    "label": "Thursday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044e05c1f",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044e0cb44",
+                    "label": "Thursday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044e05c1f",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044e0dbdf",
+                    "label": "Fr",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Fr<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044e0ec91",
+                    "label": "Friday Choice",
+                    "name": "fr_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": [
+                        0
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e43044e0fe10",
+                    "label": "Friday Hours",
+                    "name": "fr_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044e0ec91",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "acfe_repeater_stylised_button": 0,
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e43044e10f09",
+                            "label": "Open",
+                            "name": "fr_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_5e43044e10f40",
+                            "label": "Close",
+                            "name": "fr_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5e43044e13879",
+                    "label": "Friday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044e0ec91",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044e148bc",
+                    "label": "Friday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044e0ec91",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044e158f2",
+                    "label": "Sa",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Sa<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044e16907",
+                    "label": "Saturday Choice",
+                    "name": "sa_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": [
+                        0
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e43044e17967",
+                    "label": "Saturday Hours",
+                    "name": "sa_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044e16907",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "acfe_repeater_stylised_button": 0,
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e43044e189b1",
+                            "label": "Open",
+                            "name": "sa_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_5e43044e189e8",
+                            "label": "Close",
+                            "name": "sa_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5e43044e1b2a2",
+                    "label": "Saturday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044e16907",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044e1c339",
+                    "label": "Saturday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044e16907",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044dd4caf",
+                    "label": "Su",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Su<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044dd4ce6",
+                    "label": "Sunday Choice",
+                    "name": "su_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": [
+                        0
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e43044dd4d1b",
+                    "label": "Sunday Hours",
+                    "name": "su_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044dd4ce6",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "acfe_repeater_stylised_button": 0,
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e43044dd8a3e",
+                            "label": "Open",
+                            "name": "su_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_5e43044dd8a75",
+                            "label": "Close",
+                            "name": "su_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5e43044ddbac7",
+                    "label": "Sunday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044dd4ce6",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5e43044ddcdb7",
+                    "label": "Sunday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e43044dd4ce6",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                }
+            ]
+        },
+        {
+            "key": "field_600098b86b387",
+            "label": "Hours Alt 1",
+            "name": "hours_alt1",
+            "type": "group",
+            "instructions": "<b>SHORTCODE<\/b> = [tag_hours_alt1]",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e43044d9e988",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_600098b96b388",
+                    "label": "Mo",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Mo<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b389",
+                    "label": "Monday Choice",
+                    "name": "mo_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_600098b96b38a",
+                    "label": "Monday Hours",
+                    "name": "mo_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b389",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_600098b96b38b",
+                            "label": "Open",
+                            "name": "mo_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_600098b96b38c",
+                            "label": "Close",
+                            "name": "mo_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_600098b96b38d",
+                    "label": "Monday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b389",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b38e",
+                    "label": "Monday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b389",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b38f",
+                    "label": "Tu",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Tu<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b390",
+                    "label": "Tuesday Choice",
+                    "name": "tu_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_600098b96b391",
+                    "label": "Tuesday Hours",
+                    "name": "tu_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b390",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_600098b96b392",
+                            "label": "Open",
+                            "name": "tu_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_600098b96b393",
+                            "label": "Close",
+                            "name": "tu_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_600098b96b394",
+                    "label": "Tuesday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b390",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b395",
+                    "label": "Tuesday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b390",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b396",
+                    "label": "We",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>We<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b397",
+                    "label": "Wednesday Choice",
+                    "name": "we_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_600098b96b398",
+                    "label": "Wednesday Hours",
+                    "name": "we_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b397",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_600098b96b399",
+                            "label": "Open",
+                            "name": "we_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_600098b96b39a",
+                            "label": "Close",
+                            "name": "we_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_600098b96b39b",
+                    "label": "Wednesday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b397",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b39c",
+                    "label": "Wednesday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b397",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b39d",
+                    "label": "Th",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Th<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b39e",
+                    "label": "Thursday Choice",
+                    "name": "th_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_600098b96b39f",
+                    "label": "Thursday Hours",
+                    "name": "th_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b39e",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_600098b96b3a0",
+                            "label": "Open",
+                            "name": "th_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_600098b96b3a1",
+                            "label": "Close",
+                            "name": "th_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_600098b96b3a2",
+                    "label": "Thursday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b39e",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b3a3",
+                    "label": "Thursday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b39e",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b3a4",
+                    "label": "Fr",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Fr<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b3a5",
+                    "label": "Friday Choice",
+                    "name": "fr_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_600098b96b3a6",
+                    "label": "Friday Hours",
+                    "name": "fr_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b3a5",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_600098b96b3a7",
+                            "label": "Open",
+                            "name": "fr_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_600098b96b3a8",
+                            "label": "Close",
+                            "name": "fr_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_600098b96b3a9",
+                    "label": "Friday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b3a5",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b3aa",
+                    "label": "Friday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b3a5",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b3ab",
+                    "label": "Sa",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Sa<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b3ac",
+                    "label": "Saturday Choice",
+                    "name": "sa_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_600098b96b3ad",
+                    "label": "Saturday Hours",
+                    "name": "sa_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b3ac",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_600098b96b3ae",
+                            "label": "Open",
+                            "name": "sa_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_600098b96b3af",
+                            "label": "Close",
+                            "name": "sa_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_600098b96b3b0",
+                    "label": "Saturday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b3ac",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b3b1",
+                    "label": "Saturday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b3ac",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b3b2",
+                    "label": "Su",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Su<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b3b3",
+                    "label": "Sunday Choice",
+                    "name": "su_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_600098b96b3b4",
+                    "label": "Sunday Hours",
+                    "name": "su_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b3b3",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_600098b96b3b5",
+                            "label": "Open",
+                            "name": "su_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_600098b96b3b6",
+                            "label": "Close",
+                            "name": "su_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_600098b96b3b7",
+                    "label": "Sunday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b3b3",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_600098b96b3b8",
+                    "label": "Sunday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_600098b96b3b3",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                }
+            ]
+        },
+        {
+            "key": "field_6001c3302c35c",
+            "label": "Hours Alt 2",
+            "name": "hours_alt2",
+            "type": "group",
+            "instructions": "<b>SHORTCODE<\/b> = [tag_hours_alt2]",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e43044d9e988",
+                        "operator": "==",
+                        "value": "2"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6001c3302c35d",
+                    "label": "Mo",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Mo<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c35e",
+                    "label": "Monday Choice",
+                    "name": "mo_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6001c3302c35f",
+                    "label": "Monday Hours",
+                    "name": "mo_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c35e",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_6001c3302c360",
+                            "label": "Open",
+                            "name": "mo_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_6001c3302c361",
+                            "label": "Close",
+                            "name": "mo_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6001c3302c362",
+                    "label": "Monday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c35e",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c363",
+                    "label": "Monday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c35e",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c364",
+                    "label": "Tu",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Tu<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c365",
+                    "label": "Tuesday Choice",
+                    "name": "tu_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6001c3302c366",
+                    "label": "Tuesday Hours",
+                    "name": "tu_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c365",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_6001c3302c367",
+                            "label": "Open",
+                            "name": "tu_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_6001c3302c368",
+                            "label": "Close",
+                            "name": "tu_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6001c3302c369",
+                    "label": "Tuesday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c365",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c36a",
+                    "label": "Tuesday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c365",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c36b",
+                    "label": "We",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>We<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c36c",
+                    "label": "Wednesday Choice",
+                    "name": "we_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6001c3302c36d",
+                    "label": "Wednesday Hours",
+                    "name": "we_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c36c",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_6001c3302c36e",
+                            "label": "Open",
+                            "name": "we_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_6001c3302c36f",
+                            "label": "Close",
+                            "name": "we_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6001c3302c370",
+                    "label": "Wednesday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c36c",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c371",
+                    "label": "Wednesday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c36c",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c372",
+                    "label": "Th",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Th<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c373",
+                    "label": "Thursday Choice",
+                    "name": "th_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6001c3302c374",
+                    "label": "Thursday Hours",
+                    "name": "th_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c373",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_6001c3302c375",
+                            "label": "Open",
+                            "name": "th_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_6001c3302c376",
+                            "label": "Close",
+                            "name": "th_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6001c3302c377",
+                    "label": "Thursday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c373",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c378",
+                    "label": "Thursday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c373",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c379",
+                    "label": "Fr",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Fr<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c37a",
+                    "label": "Friday Choice",
+                    "name": "fr_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6001c3302c37b",
+                    "label": "Friday Hours",
+                    "name": "fr_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c37a",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_6001c3302c37c",
+                            "label": "Open",
+                            "name": "fr_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_6001c3302c37d",
+                            "label": "Close",
+                            "name": "fr_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6001c3302c37e",
+                    "label": "Friday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c37a",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c37f",
+                    "label": "Friday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c37a",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c380",
+                    "label": "Sa",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Sa<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c381",
+                    "label": "Saturday Choice",
+                    "name": "sa_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6001c3302c382",
+                    "label": "Saturday Hours",
+                    "name": "sa_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c381",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_6001c3302c383",
+                            "label": "Open",
+                            "name": "sa_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_6001c3302c384",
+                            "label": "Close",
+                            "name": "sa_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6001c3302c385",
+                    "label": "Saturday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c381",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c386",
+                    "label": "Saturday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c381",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c387",
+                    "label": "Su",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:55px;font-family:serif;text-align:center;\"><i>Su<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c388",
+                    "label": "Sunday Choice",
+                    "name": "su_choice",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [
+                        "Display Hours",
+                        "Open 24hrs",
+                        "Closed"
+                    ],
+                    "default_value": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6001c3302c389",
+                    "label": "Sunday Hours",
+                    "name": "su_hours_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c388",
+                                "operator": "==",
+                                "value": "0"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "41",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_6001c3302c38a",
+                            "label": "Open",
+                            "name": "su_open",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        },
+                        {
+                            "key": "field_6001c3302c38b",
+                            "label": "Close",
+                            "name": "su_close",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "g:iA",
+                            "return_format": "g:iA"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6001c3302c38c",
+                    "label": "Sunday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c388",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Open 24hrs<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_6001c3302c38d",
+                    "label": "Sunday",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6001c3302c388",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<div style=\"font-size:45px;font-family:serif;text-align:center;\"><i>Closed<\/i><\/div>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "hours-of-operations"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1629474233
+}

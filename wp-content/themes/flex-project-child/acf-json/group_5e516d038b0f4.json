@@ -1,0 +1,62 @@
+{
+    "key": "group_5e516d038b0f4",
+    "title": "tagGLOBAL - Forms Lock -",
+    "fields": [
+        {
+            "key": "field_5e516d0ceac47",
+            "label": "Lock Form Id",
+            "name": "lock_form_id",
+            "type": "text",
+            "instructions": "Which forms to lock from users. Comma separated form ID numbers.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e516d18eac48",
+            "label": "Lock Form Roles",
+            "name": "lock_form_roles",
+            "type": "text",
+            "instructions": "Lock out form from which user roles. Comma separated role names.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "forms-lock"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1629474275
+}

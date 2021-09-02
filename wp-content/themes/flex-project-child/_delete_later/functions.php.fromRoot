@@ -1,0 +1,206 @@
+<?php
+/**
+ * Theme functions and definitions
+ *
+ * @package HelloElementorChild
+ */
+
+/**
+ * Load child theme css and optional scripts
+ *
+ * @return void
+ */
+ 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly.
+}
+/* hide page title display everywhere */
+function ele_disable_page_title( $return ) {
+   return false;
+}
+add_filter( 'hello_elementor_page_title', 'ele_disable_page_title' ); 
+
+function hello_elementor_child_enqueue_scripts() {
+    wp_enqueue_style(
+        'hello-elementor-child-style',
+        get_stylesheet_directory_uri() . '/style.css',
+        [
+            'hello-elementor-theme-style',
+        ],
+        '1.0.0'
+    );
+}
+add_action( 'wp_enqueue_scripts', 'hello_elementor_child_enqueue_scripts' );
+
+/** 
+***    Style Elementor page builder screen outside of wordpress
+***   Elementor Hide-Mask functions with css from all but inspector savvy admins 
+**/
+/// 
+/* commented out for development */
+/* START COMMENT
+ add_action('elementor/editor/before_enqueue_scripts', function() {
+    $user2 = wp_get_current_user();
+    if ( in_array( 'client_admin', (array) $user2->roles ) ) {
+        wp_enqueue_style( 'elementor-all',get_stylesheet_directory_uri().'/assets/css/elementor_all_users.css', false, null );
+     wp_enqueue_style( 'elementor-client-admin',get_stylesheet_directory_uri().'/assets/css/elementor_client_admin.css', false, null );
+   } 
+   elseif ( in_array( 'client_editor', (array) $user2->roles ) ) {
+       wp_enqueue_style( 'elementor-all',get_stylesheet_directory_uri().'/assets/css/elementor_all_users.css', false, null );
+     wp_enqueue_style( 'elementor-client-editor',get_stylesheet_directory_uri().'/assets/css/elementor_client_editor.css', false, null );
+    }  
+    elseif ( in_array( 'tag_user', (array) $user2->roles ) ) {
+        wp_enqueue_style( 'elementor-all',get_stylesheet_directory_uri().'/assets/css/elementor_all_users.css', false, null );
+   //  wp_enqueue_style( 'elementor-admin',get_stylesheet_directory_uri().'/assets/css/elementor_tag_user.css', false, null );
+    }
+    elseif ( in_array( 'administrator', (array) $user2->roles ) ) {
+      // do something
+    
+    } else {
+    
+           wp_enqueue_style( 'elementor-all',get_stylesheet_directory_uri().'/assets/css/elementor_all_users.css', false, null );
+       
+    }
+});
+
+END COMMENT */ 
+
+
+// ACF Global Options
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'tagGLOBAL™',
+		'menu_title'	=> 'tagGLOBAL™',
+		'menu_slug' 	=> 'tag-global',
+		'position'      => '59.3',
+		'icon_url'      => 'dashicons-admin-site-alt3',
+		'updated_message' => __("tagGlobal™ Options Updated", 'acf'),
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Company Info',
+		'menu_title'	=> 'Company Info',
+		'parent_slug'	=> 'tag-global',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Social Media',
+		'menu_title'	=> 'Social Media',
+		'parent_slug'	=> 'tag-global',
+	));
+		acf_add_options_sub_page(array(
+		'page_title' 	=> 'Hours of Operation',
+		'menu_title'	=> 'Hours of Operation',
+		'parent_slug'	=> 'tag-global',
+	));
+		acf_add_options_sub_page(array(
+		'page_title' 	=> 'All Code',
+		'menu_title'	=> 'All Code',
+		'parent_slug'	=> 'tag-global',
+	));
+	
+}
+
+
+
+// Login with Google style - removes google branding
+// to be made into a wp_enqueue_style for the admin login at a later date
+function the_tag_custom_login_css() {
+    echo '<style type="text/css">
+    form#loginform p.galogin a img {display:none;}
+    form#loginform p.galogin a::after {content:"tagTEAM Login";}
+    form#loginform p.galogin a {background: none repeat scroll 0 0 #2EA2CC;border-color: #0074A2;box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset, 0 1px 0 rgba(0, 0, 0, 0.15);text-decoration: none;border-radius: 3px;padding: 4px;color: #FFFFFF;line-height: 27px;font-weight: bold;	}
+	form#loginform p.galogin a:hover {color: #CCCCCC;}
+</style>';
+}
+add_action('login_head', 'the_tag_custom_login_css');
+
+
+//Stop wordpress from adding HTML <p> to content
+remove_filter ( 'the_content', 'wpautop' );
+
+
+// ADD SHORTCODE to ACF Text Fields
+add_filter('acf/format_value/type=textarea', 'do_shortcode');
+
+
+
+
+/* helper function to get formidable forms to ACF: */
+function get_forms(){
+    $results = array();
+    foreach (FrmForm::get_published_forms() as $published_form) {
+        $results[$published_form->id] = $published_form->name;
+    }
+    return $results;
+}
+
+
+/* auto populate acf field with form IDs */
+
+function load_forms_function( $field ){
+  $result = get_forms();
+  if( is_array($result) ){
+    $field['choices'] = array();
+    foreach( $result as $key=>$match ){
+      $field['choices'][ $key ] = $match;
+    }
+  }
+    return $field;
+}
+add_filter('acf/load_field/name=formidable_ids', 'load_forms_function');
+
+
+
+/* disable guntenberg editor */
+
+add_filter('use_block_editor_for_post', '__return_false', 10);
+
+
+
+
+ /* Theme Add css for slider   */
+   
+function tag_theme_assets() {
+
+/* Instagram CSS Image Filters - https://github.com/picturepan2/instagram.css */
+wp_enqueue_style( 'instagramcss',get_stylesheet_directory_uri() . '/assets/vendor/instagram-filters/instagram.min.css', '0.1.4', 'all');
+        /*owl-carousel*/
+        wp_enqueue_style('owl-min-css',get_stylesheet_directory_uri().'/assets/vendor/owl-carousel/owl.carousel.min.css',array(),'2.0'); 
+wp_enqueue_style('owl-default-css',get_stylesheet_directory_uri().'/assets/vendor/owl-carousel/owl.theme.default.min.css',array(),'2.3.4'); 
+
+}
+add_action( 'wp_enqueue_scripts', 'tag_theme_assets', 15 );
+
+
+
+/** Bootstrap 3  -
+** to be removed when tag slider gets a css redesign
+** to work more closely with elementor default css
+**/
+function rpthem_enqueue_style(){
+wp_enqueue_style( 'bootstrapcss','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', false, null );
+}
+function rpthem_enqueue_script() {
+    wp_enqueue_script('owl-js',get_stylesheet_directory_uri().'/assets/vendor/owl-carousel/owl.carousel.min.js',[ 'jquery' ], array(), '2.0', true);
+     
+/* main js */
+wp_enqueue_script('main-js',get_stylesheet_directory_uri().'/assets/js/main.js',[ 'jquery' ], array(), '2.1', true); 
+wp_enqueue_script( 'bootstapjs', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',[ 'jquery' ], false, null );
+}
+
+add_action( 'wp_enqueue_scripts', 'rpthem_enqueue_style' );
+add_action( 'wp_enqueue_scripts', 'rpthem_enqueue_script', 96 );
+
+// Removes scheduled trash deletions
+function wpb_remove_schedule_delete() {
+  remove_action( 'wp_scheduled_delete', 'wp_scheduled_delete' );
+}
+add_action( 'init', 'wpb_remove_schedule_delete' );
+
+
+

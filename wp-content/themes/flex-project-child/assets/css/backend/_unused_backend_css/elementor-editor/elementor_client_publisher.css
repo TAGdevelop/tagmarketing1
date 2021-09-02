@@ -1,0 +1,31 @@
+/*
+changes in elementor for client_admin role
+*/
+
+
+
+
+
+/** HIDE STUFF from user **/
+/* library modal box */
+.elementor-template-library-template-local .elementor-template-library-template-more>.elementor-template-library-template-delete,
+.elementor-template-library-template-local .elementor-template-library-template-controls>.elementor-template-library-template-more-toggle
+{display:none;}
+
+.dialog-content .elementor-template-library-local-column-3, .elementor-template-library-local-column-4 {visibility:hidden}
+
+.eicon-elementor:before {content: "\f217";font-family:dashicons;}
+
+
+
+/*
+#elementor-template-library-modal .elementor-template-library-blank-message:after {content:' ask you tag digital marketing Specialist';} 
+*/
+
+/* DISPLAY NONE */
+.elementor-panel #elementor-panel-content-wrapper #elementor-panel__editor__help, .elementor-control.elementor-control-template.elementor-control-type-select, .elementor-control.elementor-control-hide_title.elementor-control-type-switcher, .elementor-control.elementor-control-template_default_description  
+{display:none;}
+
+
+
+

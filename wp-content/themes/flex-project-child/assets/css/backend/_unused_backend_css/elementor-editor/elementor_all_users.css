@@ -1,0 +1,33 @@
+/*
+changes for elementor for all users
+*/
+
+/** COMMON CSS **/
+/*icon for templates modal window */
+.elementor-templates-modal__header__logo__icon-wrapper .eicon-elementor:before {content: "\f217";font-family:"dashicons";font-size:25px;}
+.elementor-templates-modal__header__logo .elementor-gradient-logo {padding:.4em;}
+/* icon on the elementor loader */ 
+#elementor-editor-wrapper .elementor-loader, 
+#elementor-template-library-loading .elementor-loader  {padding:25px 30px 37px;}
+#elementor-editor-wrapper .elementor-loader-box:first-of-type, 
+#elementor-template-library-loading .elementor-loader-box:first-of-type  {display:none;}
+#elementor-editor-wrapper .elementor-loader-box:nth-of-type(2), 
+#elementor-template-library-loading .elementor-loader-box:nth-of-type(2) { width: 100%;}
+#elementor-editor-wrapper .elementor-loader-box:nth-of-type(3),
+#elementor-template-library-loading .elementor-loader-box:nth-of-type(3) {left: 42%;
+    text-align: center; height: 70%; width: 20%; top: 30%;}
+#elementor-editor-wrapper .elementor-loader-box:nth-of-type(4),
+#elementor-template-library-loading .elementor-loader-box:nth-of-type(4) {background:none;}
+#elementor-editor-wrapper .elementor-loader-box:nth-of-type(4):before,
+#elementor-template-library-loading .elementor-loader-box:nth-of-type(4):before {content: "tagBUILDER"; color: #a4afb7; position: absolute; bottom: -22px; left: -34px;font-size: 16px;}
+#elementor-editor-wrapper .elementor-loader-box:nth-of-type(4):after,
+#elementor-template-library-loading .elementor-loader-box:nth-of-type(4):after {right: -12px; font-size: 22px; bottom: -25px; position: absolute; content: "\2122";
+    color: #a4afb7;}
+/** Panel Header Title **/
+.e-route-panel-menu #elementor-panel-header-title:before,
+.e-route-panel-elements-categories #elementor-panel-header-title:before {content: "tagBUILDER"; color: #fff; bottom: 0px; left: 0px;font-size: 15px;}
+.e-route-panel-menu #elementor-panel-header-title:after,
+.e-route-panel-elements-categories #elementor-panel-header-title:after
+ {content: "\2122"; color: #fff; bottom: 0px; left: 0px;font-size: 20px;}
+ .elementor-panel-menu-item-exit-to-dashboard .eicon-wordpress:before {content: '\e802';}
+

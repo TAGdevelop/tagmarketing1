@@ -1,0 +1,4 @@
+/** css for tag_user **/
+
+/* DISPLAY NONE */
+ .elementor-panel #elementor-panel-content-wrapper #elementor-panel__editor__help, .elementor-control.elementor-control-hide_title.elementor-control-type-switcher {display:none;}

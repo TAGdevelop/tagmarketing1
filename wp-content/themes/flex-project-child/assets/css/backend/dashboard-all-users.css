@@ -1,0 +1,360 @@
+ 
+
+
+/** remove our dupe-it post duplicator link from acf b/c 
+ ** ACF has this functionality and it conflicts
+ **/
+ 
+ .type-acf-field-group .dupe-it {display:none;}
+  .acf-input  input::placeholder {color: #bdbdbd !important;}
+ 
+/*** ELEMENTOR some elements in Branda are overwritten by elementor ***/
+/*
+body #adminmenu #toplevel_page_elementor div.wp-menu-image:before{content: "\f217"; font-family: dashicons;font-size:18px;margin-top:1px;}
+body #adminmenu #menu-posts-elementor_library .wp-menu-image:before, body .eicon-elementor-square:before {content: "\f217"; font-family: dashicons;}
+body .dashicons-admin-page:before {content: "\f132";}
+body .menu-icon-elementor_library .wp-menu-name:before{ content: "tag";}
+body .menu-icon-elementor_library .wp-menu-name:after{ content: "\2122";}
+*/
+/* icon on the elementor loader inside wordpres editor */ 
+/*
+#elementor-editor .elementor-loader  {padding:25px 30px 37px;}
+#elementor-editor .elementor-loader-box:first-of-type  {display:none;}
+#elementor-editor .elementor-loader-box:nth-of-type(2){ width: 100%;}
+#elementor-editor .elementor-loader-box:nth-of-type(3) {left: 42%;
+    text-align: center; height: 70%; width: 20%; top: 30%;}
+#elementor-editor .elementor-loader-box:nth-of-type(4) {background:none;
+}
+#elementor-editor .elementor-loader-box:nth-of-type(4):before {content: "tagBUILDER"; color: #a4afb7; position: absolute; bottom: -22px; left: -34px;font-size: 16px;}
+#elementor-editor .elementor-loader-box:nth-of-type(4):after {right: -20px; font-size: 16px; bottom: -20px; position: absolute; content: "\2122";
+    color: #a4afb7;}
+*/
+
+/** WP Menu **/
+
+/*
+#menu-pages .wp-menu-name:before{ content: "Main ";} 
+#menu-posts .wp-menu-name:before{ content: "Blog ";}
+*/
+/*
+.menu-icon-post .dashicons-admin-post:before {
+    content: "\f132";
+}
+.menu-icon-ai1ec_event .dashicons-admin-post:before {
+    content: "\f145";
+}
+*/
+
+/** WP DASHBOARD **/
+/*body #dashboard-widgets-wrap {display:none;} */
+/*
+.welcome-panel-close {display:none;}
+*/
+/* top dashboard menu stuff */
+/*
+#toplevel_page_edit-post_type-wp_block {display:none;}
+*/
+/** Hide Admin top toolbar items */
+/*
+#wp-admin-bar-tbex-sitegroup-manage-content,
+#wp-admin-bar-website-settings-landingpages,
+#wp-admin-bar-tbex-sitegroup-forms,
+#wp-admin-bar-tbex-sitegroup-elements,
+#wp-admin-bar-tbex-sitegroup-stuff,
+#wpadminbar .quicklinks .menupop ul.ab-sub-secondary, #wpadminbar .quicklinks .menupop ul.ab-sub-secondary .ab-submenu,#wp-admin-bar-new-content,
+#wp-admin-bar-tbex-toolbar-extras, #wp-admin-bar-wp-logo,#adminmenu .tag_dash_divider div.wp-menu-image, #wp-admin-bar-group-managecontent-media-types
+{display:none;}
+*/
+#adminmenu .tag_dash_divider div.wp-menu-image
+{display:none;}
+#adminmenu .tag_dash_divider div.wp-menu-name {position:relative;z-index:1;}
+#adminmenu .tag_dash_divider div.wp-menu-name:before {
+ content:"";
+ margin: 0 auto;
+ position: absolute;
+ top: 50%;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ width: 95%;
+ z-index: -1;
+ }
+#adminmenu .tag_dash_divider div.wp-menu-name span {
+        padding: 2px 8px 3px 8px;
+        font-weight: 400;
+        color: #ffffff;
+        transition:all ease-in-out 0.4s;
+        border-radius:10px;
+    }
+body #adminmenu li.wp-menu-separator {display:none;}
+#adminmenu .tag_dash_divider  div.wp-menu-name span {font-size: 110%;font-weight: 400;color: #ffffff;}
+#adminmenu li.tag_dash_divider {
+	border-top: 3px solid #135f84;
+	box-shadow: -1px -3px 5px rgba(0, 0, 0, 0.11);
+	pointer-events: none;
+	cursor: default;
+	margin: 10px 0 ;
+	background: #2e2e2e;
+	}
+
+
+
+/** autoptimize link unclickable but still can clear cache */
+/*
+#wp-admin-bar-autoptimize a {pointer-events: none;
+  cursor: default;}
+body #wpadminbar .quicklinks li .blavatar:before {
+    content: "\f344";
+}
+.admin-color-wpi_custom_scheme #adminmenu li.menu-top:hover div.wp-menu-image:before, .admin-color-wpi_custom_scheme #adminmenu li.opensub > a.menu-top div.wp-menu-image:before,.admin-color-wpi_custom_scheme #adminmenu #collapse-menu:hover .collapse-button-icon:after,
+.admin-color-wpi_custom_scheme adminmenu li a:focus div.wp-menu-image:before, .admin-color-wpi_custom_scheme #adminmenu li.opensub div.wp-menu-image:before, #adminmenu li:hover div.wp-menu-image:before {
+    color: #ffffff;
+}
+*/
+/* Branda colors choices single lines */
+
+#adminmenu .tag_dash_divider div.wp-menu-name {text-align:center;padding:0;}
+#adminmenu li.tag_dash_divider {margin: 0px 0 0px;background:none;box-shadow:none;border-top:none;}
+
+ #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #4f4f4f;}
+ #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;font-weight: 400;background: #23282d;color: #7f7f7f;transition:all ease-in-out 0.4s;border-radius:10px;}
+ #adminmenu .tag_dash_divider a {color:#888;}
+
+
+.admin-color-light #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #d64e06;}
+.admin-color-light #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;font-weight: 400;background: #e5e5e5;color: #d64e06;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-light #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-blue #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #0b6484;}
+.admin-color-blue #adminmenu .tag_dash_divider div.wp-menu-name span  {padding: 2px 8px 3px 8px;background: #51accc;color: #0b6484;font-weight: 400;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-blue #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-coffee #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #9ea376;}
+.admin-color-coffee #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;background: #59524c;color: #9ea376;font-weight: 400;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-coffee #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-ectoplasm #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #d46f15;}
+.admin-color-ectoplasm #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;background: #523f6d;color: #d46f15;font-weight: 400;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-ectoplasm #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-midnight #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #69a7bb;}
+.admin-color-midnight #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;background: #363b3e;color: #69a7bb;font-weight: 400;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-midnight #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-ocean #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #536254;}
+.admin-color-ocean #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;background: #738e96;color: #536254;font-weight: 400;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-ocean #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-sunrise #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #ccaf0a;}
+.admin-color-sunrise #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;background: #cf4944;color: #ccaf0a;font-weight: 400;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-sunrise #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-wpi_custom_scheme #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #337f70;}
+.admin-color-wpi_custom_scheme #adminmenu .tag_dash_divider div.wp-menu-name span {color: #337f70;background: #46b29d;transition:all ease-in-out 0.4s;}
+.admin-color-wpi_custom_scheme #adminmenu .tag_dash_divider a {color:#888;}
+
+/* END single line BG Lines*/
+
+
+
+
+
+
+/* Branda colors choices bg tabs*/
+
+.admin-color-fresh #adminmenuwrap,.admin-color-fresh #adminmenu .wp-submenu,.admin-color-fresh #adminmenuback,.admin-color-fresh #adminmenuwrap,.admin-color-fresh #adminmenu, .admin-color-fresh #wpadminbar {background-color: #131313;}
+.admin-color-fresh #adminmenu .wp-submenu,.admin-color-fresh  #adminmenu .wp-has-current-submenu .wp-submenu {background-color: #343434;}
+.admin-color-fresh #adminmenu li.tag_dash_divider {box-shadow: -3px -11px 8px 0px rgb(0, 0, 0);}
+.admin-color-light  #adminmenu li.tag_dash_divider,
+.admin-color-blue  #adminmenu li.tag_dash_divider,
+.aadmin-color-ocean  #adminmenu li.tag_dash_divider,
+.admin-color-wpi_custom_scheme  #adminmenu li.tag_dash_divider {box-shadow: -3px -3px 5px 0px rgba(92, 92, 92, 0.34);}
+.admin-color-light  #adminmenu li.tag_dash_divider {border-top: 3px solid #d64e06;}
+.admin-color-light #adminmenu .tag_dash_divider div.wp-menu-name  {background: #adadad;color: #ffffff;transition:all ease-in-out 0.4s;}
+.admin-color-light #adminmenu .tag_dash_divider div.wp-menu-name span {color: #f5f5f5;}
+
+.admin-color-blue  #adminmenu li.tag_dash_divider {border-top: 3px solid #74b6ce;}
+.admin-color-blue #adminmenu .tag_dash_divider div.wp-menu-name  {background: #f1f1f1;color: #f5f5f5;transition:all ease-in-out 0.4s;}
+.admin-color-blue #adminmenu .tag_dash_divider div.wp-menu-name span {color: #3b6676;}
+
+.admin-color-coffee #adminmenu li.tag_dash_divider {border-top: 3px solid #685f59;}
+.admin-color-coffee #adminmenu .tag_dash_divider div.wp-menu-name  {background: #46403c;color: #ffffff;transition:all ease-in-out 0.4s;}
+.admin-color-coffee #adminmenu .tag_dash_divider div.wp-menu-name span {color: #bec48d;}
+
+.admin-color-ectoplasm  #adminmenu li.tag_dash_divider {border-top: 3px solid #d46f15;}
+.admin-color-ectoplasm #adminmenu .tag_dash_divider div.wp-menu-name  {background: #312640;color: #ffffff;transition:all ease-in-out 0.4s;}
+.admin-color-ectoplasm #adminmenu .tag_dash_divider div.wp-menu-name span {color: #ffffff;}
+
+.admin-color-midnight  #adminmenu li.tag_dash_divider {border-top: 3px solid #9fc2cc;}
+.admin-color-midnight #adminmenu .tag_dash_divider div.wp-menu-name  {background: #7197a3;color: #ffffff;transition:all ease-in-out 0.4s;}
+.admin-color-midnight #adminmenu .tag_dash_divider div.wp-menu-name span {color: #ffffff;}
+
+.admin-color-ocean  #adminmenu li.tag_dash_divider {border-top: 3px solid #9ebaa0;}
+.admin-color-ocean #adminmenu .tag_dash_divider div.wp-menu-name  {background: #aa9d87;color: #ffffff;transition:all ease-in-out 0.4s;}
+.admin-color-ocean #adminmenu .tag_dash_divider div.wp-menu-name span {color: #ffffff;}
+
+.admin-color-sunrise  #adminmenu li.tag_dash_divider {border-top: 3px solid #f6d30e;}
+.admin-color-sunrise #adminmenu .tag_dash_divider div.wp-menu-name  {background: #ccaf0a;color: #000000;transition:all ease-in-out 0.4s;}
+.admin-color-sunrise #adminmenu .tag_dash_divider div.wp-menu-name span {color: #661815;}
+
+.admin-color-wpi_custom_scheme  #adminmenu li.tag_dash_divider {border-top: 3px solid #b1493c;}
+.admin-color-wpi_custom_scheme #adminmenu .tag_dash_divider div.wp-menu-name  {color: #ffffff;background: #df5949;transition:all ease-in-out 0.4s;}
+.admin-color-wpi_custom_scheme #adminmenu .tag_dash_divider div.wp-menu-name span {color: #ffffff;}
+
+
+/* END tabs BG Tabs*/
+
+/* Branda colors choices rounded bubble BG Lines*/
+
+
+#adminmenu .tag_dash_divider div.wp-menu-name {text-align:center;}
+#adminmenu li.tag_dash_divider {margin: 20px 0 3px;background:none;box-shadow:none;border-top:none}
+
+ #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #4f4f4f;}
+ #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;font-weight: 400;background: #4c4b4b;color: #a2a2a2;transition:all ease-in-out 0.4s;border-radius:10px;}
+ #adminmenu .tag_dash_divider a {color:#888;}
+
+
+.admin-color-light #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #d64e06;}
+.admin-color-light #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;font-weight: 400;background: #d64e06;color: #ffffff;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-light #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-blue #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #0b6484;}
+.admin-color-blue #adminmenu .tag_dash_divider div.wp-menu-name span  {padding: 2px 8px 3px 8px;background: #0b6484;color: #f5f5f5;font-weight: 400;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-blue #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-coffee #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #9ea376;}
+.admin-color-coffee #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;background: #9ea376;color: #ffffff;font-weight: 400;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-coffee #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-ectoplasm #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #d46f15;}
+.admin-color-ectoplasm #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;background: #d46f15;color: #ffffff;font-weight: 400;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-ectoplasm #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-midnight #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #69a7bb;}
+.admin-color-midnight #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;background: #69a7bb;color: #ffffff;font-weight: 400;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-midnight #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-ocean #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #aa9d87;}
+.admin-color-ocean #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;background: #aa9d87;color: #ffffff;font-weight: 400;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-ocean #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-sunrise #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #ccaf0a;}
+.admin-color-sunrise #adminmenu .tag_dash_divider div.wp-menu-name span {padding: 2px 8px 3px 8px;background: #ccaf0a;color: #ffffff;font-weight: 400;transition:all ease-in-out 0.4s;border-radius:10px;}
+.admin-color-sunrise #adminmenu .tag_dash_divider a {color:#888;}
+
+.admin-color-wpi_custom_scheme #adminmenu .tag_dash_divider div.wp-menu-name:before {border-top: 1px solid #df5949;}
+.admin-color-wpi_custom_scheme #adminmenu .tag_dash_divider div.wp-menu-name span {color: #ffffff;background: #df5949;transition:all ease-in-out 0.4s}
+.admin-color-wpi_custom_scheme #adminmenu .tag_dash_divider a {color:#888;}
+
+/* END rounded bubble BG Lines*/
+
+
+/* end dashboard menu stuff */
+
+/* dashboard widgets override */
+/*
+.postbox-container {
+    min-width: 33% !important;
+}
+*/
+/* empty box area */
+
+/*
+.meta-box-sortables.ui-sortable.empty-container { 
+    display: none;
+}
+*/
+/* Dashboard welcome widgets */
+/*
+.index-php .metabox-holder #postbox-container-1 h2.hndle,
+.index-php .metabox-holder #postbox-container-2 h2.hndle,
+.index-php .metabox-holder #postbox-container-3 h2.hndle,
+.index-php .metabox-holder #postbox-container-4 h2.hndle {
+    color: #fff;
+    text-align:center;
+    font-size:18px;
+}
+.index-php .metabox-holder #postbox-container-1 h2.hndle {
+    background: #0073aa;
+}
+.index-php .metabox-holder #postbox-container-2 h2.hndle {
+    background: #a90202;
+}
+.metabox-holder #postbox-container-3 h2.hndle {
+    background: #00aa16 ;
+}
+.index-php .metabox-holder #postbox-container-4 h2.hndle {
+    background:#f68401 ;
+}
+#wpcontent .welcome-panel {
+    padding: 0px 0px 25px 0;
+    border: 1px solid #ccd0d4;
+  font-size: 18px;
+    line-height: 1.7;
+}
+.welcome-panel li {
+    font-size: 18px;
+}
+
+.index-php .metabox-holder #postbox-container-1 .handlediv, .index-php .metabox-holder #postbox-container-2 .handlediv, .index-php .metabox-holder #postbox-container-3 .handlediv, .index-php .metabox-holder #postbox-container-4 .handlediv {
+    background:#003d5a;
+    width: 30px;
+    opacity: 0.4;
+    margin: 6px;
+    border-radius: 50%;
+   height: 30px;
+}
+.index-php .metabox-holder #postbox-container-2 .handlediv {
+    background:#590000;
+}
+.index-php .metabox-holder #postbox-container-3 .handlediv {
+    background:#00640d;
+}
+
+.index-php .metabox-holder #postbox-container-4 .handlediv {
+    background:#ac5c00;
+}
+.index-php .metabox-holder #postbox-container-1 .toggle-indicator, 
+.index-php .metabox-holder #postbox-container-2 .toggle-indicator,
+.index-php .metabox-holder #postbox-container-3 .toggle-indicator,
+.index-php .metabox-holder #postbox-container-4 .toggle-indicator{
+    color:#fff;
+    }
+
+ .index-php .metabox-holder #postbox-container-1 .postbox:hover .handlediv, 
+.index-php .metabox-holder #postbox-container-2 .postbox:hover .handlediv, 
+.index-php .metabox-holder #postbox-container-3 .postbox:hover .handlediv, 
+.index-php .metabox-holder #postbox-container-4 .postbox:hover .handlediv,
+.index-php .metabox-holder #postbox-container-1  .postbox:hover .toggle-indicator, 
+.index-php .metabox-holder #postbox-container-2  .postbox:hover .toggle-indicator,
+.index-php .metabox-holder #postbox-container-3  .postbox:hover .toggle-indicator,
+.index-php .metabox-holder #postbox-container-4  .postbox:hover .toggle-indicator {
+    opacity:1;
+    }
+
+*/
+/* ACF */
+/* 
+ #poststuff .acf-field.dashicons-before .acf-label {display: inline-block;}
+  #poststuff .acf-field.dashicons-before .acf-label {display: inline-block;}
+  #poststuff .acf-postbox h2.hndle {transition:all ease-in-out 0.6s;background: #0073aa;color: #fff !important;}
+   #poststuff .acf-postbox h2.hndle:hover {transition:all ease-in-out 0.6s;background: #0073aa !important;color: #fff !important;}
+  #poststuff .acf-postbox.closed h2.hndle {transition:all ease-in-out 0.6s;background: #5d899e !important;color:#ddd !important;}
+    #poststuff .acf-postbox.closed h2.hndle:hover {transition:all ease-in-out 0.6s;background: #0073aa !important;}
+  #poststuff .acf-postbox h2.hndle:after {color:#ededed !important;transition:all ease-in-out 0.6s;content:" - (click to close - drag to reorder)";}
+  #poststuff .acf-postbox.closed h2.hndle:after {color:#fff !important;transition:all ease-in-out 0.6s;content:" - (click to open - drag to reorder)";}
+  #poststuff .acf-postbox>.hndle .acf-hndle-cog {color: #ffffff;}
+#poststuff .acf-postbox .toggle-indicator {transition:all ease-in-out 0.6s;color: #ffffff !important;
+    border-color: transparent;background: #46b450;display: inline-block;height: 24px;width: 24px;border: transparent solid 1px;border-radius: 100%;font-size: 16px;line-height: 26px;text-align: center;text-decoration: none;vertical-align: top;box-sizing: content-box;}
+#poststuff .acf-postbox.closed .toggle-indicator {color: #ffffff !important;background: #dc3232;}
+#poststuff .acf-postbox .toggle-indicator:hover {   background: #7fc241;}
+.js #poststuff .postbox.acf-postbox .handlediv:focus .toggle-indicator:before {box-shadow: none;}
+.js #poststuff .postbox.acf-postbox .handlediv .toggle-indicator:before {margin: -3px 0 0 -10px;width: 20px;border-radius: 50%;text-indent: -1px;font: normal 30px/1 dashicons;}
+body .acf-field input[type="text"], body .acf-field input[type="password"], body .acf-field input[type="date"], body .acf-field input[type="datetime"], body .acf-field input[type="datetime-local"], body .acf-field input[type="email"], body .acf-field input[type="month"], body .acf-field input[type="number"], body .acf-field input[type="search"], body .acf-field input[type="tel"], body .acf-field input[type="time"], body .acf-field input[type="url"], body .acf-field input[type="week"], body .acf-field textarea, body .acf-field select {color:#000;}
+body .acf-field input[type="text"]::placeholder, body .acf-field input[type="password"]::placeholder, body .acf-field input[type="date"]::placeholder, body .acf-field input[type="datetime"]::placeholder, body .acf-field input[type="datetime-local"]::placeholder, body .acf-field input[type="email"]::placeholder, body .acf-field input[type="month"]::placeholder, body .acf-field input[type="number"]::placeholder, body .acf-field input[type="search"]::placeholder, body .acf-field input[type="tel"]::placeholder, body .acf-field input[type="time"]::placeholder, body .acf-field input[type="url"]::placeholder, body .acf-field input[type="week"]::placeholder, body .acf-field textarea::placeholder, body .acf-field select::placeholder  {color:#b8b8b8;}
+*/
+/* HIDE DUPE FROM Elementor theme builder - it does not work correctly 
+** If you dup a footer or header post type - it creates it as a "Page"
+*/
+.post-type-elementor_library .dupe-it {display:none;}

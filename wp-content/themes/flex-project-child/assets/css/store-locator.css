@@ -1,0 +1,32 @@
+/*wp Location */
+#wpsl-wrap {overflow: visible;/* background: #efefef; */}
+#wpsl-wrap .wpsl-input >div { display: block; margin: 0; width: 100%; }
+#wpsl-wrap #wpsl-results label, #wpsl-wrap #wpsl-radius label, #wpsl-wrap .wpsl-input label { display: block; width: 100%; font-size: 16px; text-transform: uppercase; }
+#wpsl-wrap #wpsl-results .wpsl-dropdown, #wpsl-wrap #wpsl-radius .wpsl-dropdown, #wpsl-wrap #wpsl-search-input { width: 100%; }
+#wpsl-wrap .wpsl-search-btn-wrap { display: none; }
+#wpsl-wrap .wpsl-search { margin-bottom: 0; padding: 20px 0; background: #efefef; position: relative; height: auto; display: inline-block; width: 100%; border-bottom: solid 30px #fff; }
+#wpsl-wrap .wpsl-search:before, #wpsl-wrap .wpsl-search:after { position: absolute; content: ""; width: 100%; height: 100%; left: -100%; top: 0; display: block; background: #ffdd00; }
+#wpsl-wrap .wpsl-search:after { right: -100%; left: auto; }
+#wpsl-wrap #wpsl-result-list {padding: 10px;margin: 0;/* background: #a7a9ac; */}
+#wpsl-result-list #wpsl-stores li {overflow: visible;box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.12);background: #fff;padding:5px 25px;margin-bottom: 10px;}
+#wpsl-result-list #wpsl-stores .lctm_title { margin: 0; padding: 0; display: block; margin-left: -10px; text-transform: unset; position: relative; cursor: pointer; font-size:18px;}
+#wpsl-result-list #wpsl-stores .lctm_title:after {content: "";width: 50px;display: block;height: 3px;background: #e9492f;clear: both;margin-bottom: 10px;}
+#wpsl-result-list #wpsl-stores .lctm_title.active span:before { content: "\e250"; }
+#wpsl-result-list #wpsl-stores .lctm_title span { position: absolute; right: -15px; top: 5px }
+#wpsl-wrap.ggmultisite-store { margin-bottom: 0; }
+#wpsl-wrap.ggmultisite-store #wpsl-gmap, #wpsl-wrap.ggmultisite-store #wpsl-result-list { width: 100%; height: 100%; }
+#wpsl-wrap.ggmultisite-store #wpsl-stores {padding-right: 10px;overflow: visible;color: #2b2b2b;overflow-y:auto;}
+#wpsl-wrap.ggmultisite-store #wpsl-gmap {/* height: 100% !important;*/ min-height: 350px; }
+#wpsl-wrap .wpsl-store-location .wpsl-store-details, #wpsl-wrap.ggmultisite-store .wpsl-directions { font-weight: bold; color: #3C3C3C; }
+#wpsl-wrap .wpsl-store-hours { margin-top: 0; margin-bottom: 10px; }
+#wpsl-wrap .wpsl-store-hours > strong, #wpsl-wrap .wpsl-store-location .wpsl-more-info-listings > p { display: none !important; }
+#wpsl-wrap .lct_storewp { display: none; }
+#store_lct { background: #a7a9ac; position: relative; }
+#wpsl-wrap ul > li:first-child .lct_storewp { display: block; }
+#wpsl-result-list #wpsl-stores ul > li:first-child .lctm_title.active span:before {content: "\e252";}
+#wpsl-stores  ul > li:first-child .glyphicon-triangle-bottom:before {content: "\e250";}
+
+/* DEFAULT TEMPLATE */
+#wpsl-wrap .wpsl-search {display:none;}
+#wpsl-wrap {margin-bottom:0;overflow:hidden;}
+#wpsl-wrap #wpsl-result-list {padding-bottom:0;padding-left:0;}

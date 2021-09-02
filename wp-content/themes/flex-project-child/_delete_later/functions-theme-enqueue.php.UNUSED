@@ -1,0 +1,101 @@
+<?php
+/*
+
+@package flexproject
+
+   ===============
+   WP FRONTEND ENQUEUE HERE
+   ===============
+   
+*/
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+
+
+function theme_flexproject_main_enqueue_styles() {
+    wp_enqueue_style( 'corestylecss', get_stylesheet_directory_uri() . '/style.css' );
+ wp_enqueue_style( 'bootstrap4', get_stylesheet_directory_uri() . '/assets/vendor/bootstrap4/css/bootstrap.min.css' );
+// wp_enqueue_style( 'swiper-css', get_stylesheet_directory_uri() . '/assets/vendor/swiper/swiper.min.css' );
+wp_enqueue_style( 'maincss', get_stylesheet_directory_uri() . '/assets/css/main.css' );
+
+}
+add_action( 'wp_enqueue_scripts', 'theme_flexproject_main_enqueue_styles');
+
+/*
+
+// Register Global for template part
+global $tagslider;
+$tagslider = false;
+     // What to do if template part = true
+function tag_slider_check(){
+    global $tagslider;
+    $tagslider = true;
+    if ($tagslider){
+       // OLD scripts and css needed for tagSlider 
+      // should be re-written with bootstrap 4 and swiper js
+     // swiper slider library seems to load with elementor
+      
+wp_enqueue_style( 'bootstrap3css', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+wp_enqueue_style( 'instagramcss',get_stylesheet_directory_uri() . '/assets/vendor/instagram-filters/instagram.min.css', '0.1.4', 'all');
+wp_enqueue_style( 'owlcss',get_stylesheet_directory_uri() . '/assets/deprecated/owl.carousel.min.css');
+wp_enqueue_style( 'owlthemecss',get_stylesheet_directory_uri() . '/assets/deprecated/owl.theme.default.min.css');
+wp_enqueue_style( 'oldmaincss',get_stylesheet_directory_uri() . '/assets/deprecated/old-main.css');
+         
+wp_enqueue_script( 'old-main-js',get_stylesheet_directory_uri() . '/assets/deprecated/old.main.js');
+wp_enqueue_script( 'owl-js',get_stylesheet_directory_uri() . '/assets/deprecated/owl.carousel.min.js');
+wp_enqueue_script( 'bootstrap3js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
+
+   // END OLD scripts     
+    }else{
+       //  template part is not loaded
+    }
+}
+add_action( 'wp_enqueue_scripts', 'tag_slider_check' );    
+  
+// END Register Script for template part
+*/
+
+//  Register these a little later
+add_action( 'wp_enqueue_scripts', 'theme_flexproject_main_enqueue_styles');
+function themeflexproject_main_enqueue_scripts() {
+  wp_enqueue_script( 'bootstrap4js', get_stylesheet_directory_uri() . '/assets/vendor/bootstrap4/js/bootstrap.bundle.min.js', array( 'jquery' ) );
+  wp_enqueue_script('main-js',get_stylesheet_directory_uri().'/assets/js/main.js', array('jquery'), '1.0', true); 
+
+}
+
+
+
+
+/*
+   ===============
+   ELEMENTOR EDITOR FROM THE FRONTEND
+   Probably not need if top menu is deactivated using Branda
+   ===============
+   
+*/
+
+/*
+/// Target User Roles 
+function frontend_wjm_admin_user_css() {
+    $user = wp_get_current_user();
+    if ( in_array( 'administrator', (array) $user->roles ) ) {
+     //do something
+    } elseif ( in_array( 'seo_editor', (array) $user->roles ) ) {
+       //do something
+    } elseif ( in_array( 'client_admin', (array) $user->roles ) ) {
+      
+        wp_enqueue_style( 'aioseo_mask_css', get_stylesheet_directory_uri().'/assets/css/backend/dashboard-client-admin.css' );
+    } else {
+       // do something
+    
+    }
+}
+add_action( 'wp_enqueue_scripts', 'frontend_wjm_admin_user_css' );
+*/
+
+
+
+

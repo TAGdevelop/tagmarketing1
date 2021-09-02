@@ -1,0 +1,36 @@
+/* 
+    Theme Name: tagFLEX Project
+    Template: hello-elementor
+    Text Domain: flex-project-child
+	Theme URI: https://tagdigitalmarketing.com
+	Description: A extension to aid in ACF inclusions to the plain-vanilla & lightweight theme for Elementor page builder.
+	Author: tagDevelopment Team
+	Author URI: https://tagdigitalmarketing.com
+	Version: 1.0.1
+	Stable tag: 1.0.1
+	Requires at least: 4.7
+	Tested up to: 5.2
+	License: GNU General Public License v3 or later.
+	License URI: https://www.gnu.org/licenses/gpl-3.0.html
+	Tags: flexible-header, ACF, Advanced Custom Fields, custom-colors, custom-menu, custom-logo, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/*
+    Add your custom styles here
+*/
+/* override hello defaults here */
+[type=button], [type=submit], button {
+   color: #464646;
+ background-color: #e2e2e2;
+    border: 1px solid #b1b1b1;
+}
+[type=button]:focus, [type=button]:hover, [type=submit]:focus, [type=submit]:hover, button:focus, button:hover {
+    color: #fff;
+    background-color: #424242;
+    text-decoration: none;
+}
+button:disabled, button:disabled:hover {
+    color: #ccc7c7;
+    background-color: #efeded;
+    border: #f1f1f1;
+}

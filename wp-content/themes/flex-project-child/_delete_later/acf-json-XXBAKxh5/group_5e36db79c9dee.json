@@ -1,0 +1,592 @@
+{
+    "key": "group_5e36db79c9dee",
+    "title": "tagGLOBAL - Company Info",
+    "fields": [
+        {
+            "key": "field_5e77f743efa68",
+            "label": "Website Header Logo",
+            "name": "website_header_logo",
+            "type": "image",
+            "instructions": "Website Logo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e77f773efa69",
+            "label": "Website Footer Logo",
+            "name": "website_footer_logo",
+            "type": "image",
+            "instructions": "Logo if footer logo is used",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6001f131719b9",
+            "label": "Website Favicon",
+            "name": "tag_fav",
+            "type": "image",
+            "instructions": "Favicon - square png - 64 x 64",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e377c15e1d34",
+            "label": "Company Info",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e36dc4eb9cc7",
+            "label": "Company Name",
+            "name": "company_name",
+            "type": "text",
+            "instructions": "Please fill in the name to display in address areas.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e36dc6ab9cc8",
+            "label": "Copyright Name",
+            "name": "copyright_name",
+            "type": "text",
+            "instructions": "Please fill in the name to display in the copyright area.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e36dc78b9cc9",
+            "label": "Copyright Year",
+            "name": "copyright_year",
+            "type": "text",
+            "instructions": "Please fill in the year to display in the copyright.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e36dcaab9ccc",
+            "label": "Street",
+            "name": "street",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e36dcd4b9ccd",
+            "label": "City",
+            "name": "city",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e36dcddb9cce",
+            "label": "State",
+            "name": "state",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 2
+        },
+        {
+            "key": "field_5e36dd01b9cd0",
+            "label": "ZIP",
+            "name": "zip",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e36dcf2b9ccf",
+            "label": "Full Spelling of State",
+            "name": "full_state",
+            "type": "text",
+            "instructions": "Used for GEO data",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e36dd18b9cd1",
+            "label": "Country Code",
+            "name": "country_code",
+            "type": "text",
+            "instructions": "Use 2 character abbreviation",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "US",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 2
+        },
+        {
+            "key": "field_5e36dd25b9cd2",
+            "label": "Full Spelling of Country",
+            "name": "full_country",
+            "type": "text",
+            "instructions": "Used for GEO data",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e37733ef366c",
+            "label": "Schema Logo",
+            "name": "schema_logo",
+            "type": "image",
+            "instructions": "Logo Image not visible on website - needed to pass schema validation check.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e36dc8eb9cca",
+            "label": "Company Description",
+            "name": "company_description",
+            "type": "textarea",
+            "instructions": "Hidden field - used for SEO and schema markup.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "Selling specialty products from around the globe since 1996.",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "key": "field_5e36dca1b9ccb",
+            "label": "Product Price Range",
+            "name": "price_range",
+            "type": "text",
+            "instructions": "Hidden field. i.e. $-$$$ (Google range) or $0-$49.99 - warnings when empty.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "$-$$$",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e377a3cb3f60",
+            "label": "Contact",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<hr>\r\n<b>Phone:<\/b>\r\nFormat 123-456-7890 - Do not use parenthesis or country code. If any country code other then +1 is needed. Please ticket development.\r\n<br><br>\r\n<b>Phone Descriptions<\/b>\r\ni.e Business, Sales, Support, Fax, etc. Primarily used for hcard & schema markup.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5e36dda0b9cd6",
+            "label": "Phone Number",
+            "name": "phone",
+            "type": "text",
+            "instructions": "Format = 123-456-7890",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "16.5",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "123-456-7890",
+            "prepend": "",
+            "append": "",
+            "maxlength": 12
+        },
+        {
+            "key": "field_5ff73f0c75796",
+            "label": "tel:Phone 1 for Links",
+            "name": "phone_link",
+            "type": "text",
+            "instructions": "Format = tel:123-456-7890",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "16.5",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "tel:123-456-7890",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e37796f36354",
+            "label": "Phone Number 2",
+            "name": "phone_2",
+            "type": "text",
+            "instructions": "Format = 123-456-7890",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "16.5",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "123-456-7890",
+            "prepend": "",
+            "append": "",
+            "maxlength": 12
+        },
+        {
+            "key": "field_6001dd1e4306e",
+            "label": "tel:Phone 2 for Links",
+            "name": "phone_link_2",
+            "type": "text",
+            "instructions": "Format = tel:123-456-7890",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "16.5",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "tel:123-456-7890",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e377db5e7522",
+            "label": "Contact Email",
+            "name": "email",
+            "type": "email",
+            "instructions": "Format = info@company.com",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "support@your_company.com",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5e36dd3bb9cd3",
+            "label": "Phone Description",
+            "name": "phone_description",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "Business",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e37794836353",
+            "label": "Phone Description 2",
+            "name": "phone_description_2",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "Fax",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e3780211aa8a",
+            "label": "Email 2",
+            "name": "email_2",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "other@your_company.com",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5e377cdfb7f9c",
+            "label": "Coordinates",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Used for GEO meta data & schema\r\n<hr>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5e36ddddb9cd8",
+            "label": "Longitude",
+            "name": "longitude",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e36ddd8b9cd7",
+            "label": "Latitude",
+            "name": "latitude",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "tag-global"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1610740436
+}

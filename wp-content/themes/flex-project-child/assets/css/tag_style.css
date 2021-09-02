@@ -1,0 +1,22 @@
+#tag_footer.primary_bg {
+  background: #f00;
+}
+#tag_footer.primary_bg h2 {
+  color: #fff;
+}
+#tag_footer.primary_bg a {
+  color: blue;
+}
+#tag_footer.primary_bg a:hover {
+  color: #fff;
+}
+#tag_header.primary_bg h2 {
+  color: #fff;
+}
+#tag_header.primary_bg a {
+  color: blue;
+}
+#tag_header.primary_bg a:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=tag_style.css.map */
