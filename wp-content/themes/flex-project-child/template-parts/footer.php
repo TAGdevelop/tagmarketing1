@@ -9,6 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<footer id="site-footer" class="site-footer parts_footer_php testclass2" role="contentinfo">
+<footer id="site-footer" class="site-footer parts_footer_php testclass31" role="contentinfo">
 	<?php // footer. ?>
 </footer>
